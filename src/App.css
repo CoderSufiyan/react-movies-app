@@ -40,7 +40,71 @@
 
 /* My CSS */
 
+body {
+  margin: 0 3rem 0 3rem;
+}
 .banner-card{
   background-color: white;
-  width:100vw;
+}
+.banner-card > img {
+  height: 70vh;
+  width: 100%;
+  /* object-fit: contain; */
+}
+
+.banner-text {
+  position: absolute;
+  color: white;
+  top: 60vh;
+  left: 5vw;
+}
+.banner-title {
+  position: absolute;
+  color: white;
+  top: 50vh;
+  left: 5vw;
+  font-size: 2rem;
+}
+.movie-list {
+  
+  display: flex;
+  place-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.movie-card {
+  width: 20vw;
+  position: relative;
+  color: whitesmoke;
+}
+.movie-title {
+  position: absolute;
+  top: 1rem;
+  left: .4rem;
+}
+.button-wrapper a {
+  position: absolute;
+  top: 80%;
+}
+.button-wrapper {
+  display: flex;
+  place-content: center;
+}
+@media screen and (max-width: 400px) {
+  .banner-card {
+    height: 25vh;
+  }
+  .banner-card > img {
+    height: 30vh;
+  }
+  .banner-title {
+    top: 11vh;
+    left: 5vw;
+    font-size: 1.5rem;
+  }
+  .banner-text {
+    top: 19vh;
+    left: 5vw;
+    font-size: .7rem;
+  }
 }
