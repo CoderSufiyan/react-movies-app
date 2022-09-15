@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import { movies } from "./getMovies";
 import axios from 'axios';  
-
+import { api } from "./secret";
 export default class List extends Component {
   constructor() {
     super();
@@ -15,7 +15,7 @@ export default class List extends Component {
   }
   async componentDidMount() {
     // side effects
-    const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=&language=en-US&page=${this.state.currPage}`)
+    const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${api.apiKey}&language=en-US&page=${this.state.currPage}`)
     let data = res.data;
     // console.log(data);
     this.setState({
@@ -34,7 +34,7 @@ export default class List extends Component {
   };
   changeMovies= async () => {
     // console.log('change movies called');
-    const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=&language=en-US&page=${this.state.currPage}`)
+    const res = await axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${api.apiKey}&language=en-US&page=${this.state.currPage}`)
     let data = res.data;
     // console.log(data);
     this.setState({
