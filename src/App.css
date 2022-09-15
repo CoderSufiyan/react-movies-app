@@ -90,6 +90,26 @@ body {
   display: flex;
   place-content: center;
 }
+
+.my-pagination {
+  display: flex;
+  place-content: center;
+  margin: 1rem 0 1rem 0;
+}
+
+.favourites-genres {
+  padding: 2rem;
+
+}
+.favourites-table {
+  padding: 2rem;
+}
+
+
+
+
+
+
 @media screen and (max-width: 400px) {
   .banner-card {
     height: 25vh;
@@ -106,5 +126,10 @@ body {
     top: 19vh;
     left: 5vw;
     font-size: .7rem;
+  }
+  .movie-card {
+    width: 100vw;
+    position: relative;
+    color: whitesmoke;
   }
 }
