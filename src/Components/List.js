@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from "react";
 // import { movies } from "./getMovies";
 import axios from 'axios';  
@@ -53,7 +54,7 @@ export default class List extends Component {
   }
   
   handleLeft = async () => {
-    if(this.state.currPage!=1){
+    if(this.state.currPage!==1){
       this.setState({
         currPage: this.state.currPage-1,
       },this.changeMovies)
@@ -61,7 +62,7 @@ export default class List extends Component {
   }
 
   handleClick = (value)=> {
-    if(value!=this.state.currPage){
+    if(value!==this.state.currPage){
       this.setState({
         currPage: value
       },this.changeMovies)
@@ -70,7 +71,7 @@ export default class List extends Component {
   handleFavourites = (movie)=>{
     let oldData = JSON.parse(localStorage.getItem("movies-app") || "[]");
     if(this.state.favourites.includes(movie.id)){
-      oldData = oldData.filter((m)=>m.id!=movie.id);
+      oldData = oldData.filter((m)=>m.id!==movie.id);
     } else {
       oldData.push(movie);
     }
@@ -117,7 +118,7 @@ export default class List extends Component {
                   </h5>
                   {/* <p className="card-text banner-text">{movieObj.overview}</p> */}
                   <div className="button-wrapper">
-                    {this.state.hover == movieObj.id && (
+                    {this.state.hover === movieObj.id && (
                       <a className="btn btn-primary" onClick={()=> this.handleFavourites(movieObj)}>
                         {
                           this.state.favourites.includes(movieObj.id) ? "Remove from favourites" : "Add to favourites"

@@ -101,7 +101,7 @@ export default class Favourite extends Component {
   }
   handleRemove = (id)=> {
     let newArr = [];
-    newArr = this.state.movies.filter((movieObj)=> movieObj.id != id);
+    newArr = this.state.movies.filter((movieObj)=> movieObj.id !== id);
     this.setState({
       movies: [...newArr]
     })
