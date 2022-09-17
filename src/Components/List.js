@@ -96,7 +96,7 @@ export default class List extends Component {
           </div>
         ) : (
           <div>
-            <h3 className="text-center">
+            <h3 className="text-center my-pagination">
               <strong>Trending</strong>
             </h3>
             <div className="movie-list">

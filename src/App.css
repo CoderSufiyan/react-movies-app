@@ -105,10 +105,22 @@ body {
   padding: 2rem;
 }
 
+#search-bar {
+  display: flex;
+  place-items: center;
+  gap: 1rem;
+  margin: 1rem 0 1rem 0;
+  padding: 1rem;
+}
+.fa {
+  cursor: pointer;
+}
 
 
-
-
+.favourites-table {
+  padding: 1rem;
+  overflow: auto;
+}
 
 @media screen and (max-width: 400px) {
   .banner-card {
